@@ -1,0 +1,23 @@
+---
+- name: install prerequisites
+  yum: 
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - vim
+    - git
+
+- name: deploy .vim
+  git: 
+    repo: "{{ toolbox_vim_repo }}"
+    dest: ~/.vim
+  become_user: "{{ item }}"
+  with_items: "{{ toolbox_vim_users }}"
+
+- name: configure .vimrc
+  file: 
+    src: ~/.vim/.vimrc
+    dest: ~/.vimrc 
+    state: link
+  become_user: "{{ item }}"
+  with_items: "{{ toolbox_vim_users }}"
