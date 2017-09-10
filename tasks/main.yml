@@ -7,6 +7,13 @@
     - vim
     - git
 
+- name: Configure git
+  copy: 
+    src: gitconfig
+    dest: ~/.gitconfig
+  become_user: "{{ item }}"
+  with_items: "{{ toolbox_git_users }}"
+
 - name: deploy .vim
   git: 
     repo: "{{ toolbox_vim_repo }}"

@@ -1,0 +1,12 @@
+[user]
+	email = jafelee@gmail.com
+	name = Jeff Li
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	br = branch
+[core]
+	editor = vim
+[color]
+	ui = true

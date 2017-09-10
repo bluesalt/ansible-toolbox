@@ -2,3 +2,6 @@
 toolbox_vim_repo: https://github.com/bluesalt/DOTVim
 toolbox_vim_users:
   - "{{ ansible_ssh_user }}"
+
+toolbox_git_users:
+  - "{{ ansible_ssh_user }}"
