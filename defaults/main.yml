@@ -5,3 +5,6 @@ toolbox_vim_users:
 
 toolbox_git_users:
   - "{{ ansible_ssh_user }}"
+
+toolbox_tmux_users:
+  - "{{ ansible_ssh_user }}"

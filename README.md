@@ -17,6 +17,8 @@ ansible-galaxy install bluesalt.toolbox
 All the available options are not mandatory at the moment. Default values could be  referenced from the [role's defaults directory](defaults/main.yml).
 
 
+#### Vim
+
 * Use customized vim repo
 
 ```
@@ -27,6 +29,25 @@ toolbox_vim_repo: https://github.com/bluesalt/DOTVim
 
 ```
 toolbox_vim_users:
+  - "{{ ansible_ssh_user }}"
+  - root
+```
+
+#### Git
+
+* Specify list of users who will use Git
+
+```
+toolbox_git_users:
+  - "{{ ansible_ssh_user }}"
+  - root
+```
+
+#### tmux
+* Specify list of users who will use tmux
+
+```
+toolbox_tmux_users:
   - "{{ ansible_ssh_user }}"
   - root
 ```

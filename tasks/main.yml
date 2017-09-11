@@ -6,6 +6,7 @@
   with_items:
     - vim
     - git
+    - tmux
 
 - name: Configure git
   copy: 
@@ -28,3 +29,10 @@
     state: link
   become_user: "{{ item }}"
   with_items: "{{ toolbox_vim_users }}"
+
+- name: Configure tmux
+  copy: 
+    src: tmux.conf
+    dest: ~/.tmux.conf
+  become_user: "{{ item }}"
+  with_items: "{{ toolbox_tmux_users }}"
