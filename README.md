@@ -29,7 +29,7 @@ toolbox_vim_repo: https://github.com/bluesalt/DOTVim
 
 ```
 toolbox_vim_users:
-  - "{{ ansible_ssh_user }}"
+  - "{{ ansible_user }}"
   - root
 ```
 
@@ -39,7 +39,7 @@ toolbox_vim_users:
 
 ```
 toolbox_git_users:
-  - "{{ ansible_ssh_user }}"
+  - "{{ ansible_user }}"
   - root
 ```
 
@@ -48,7 +48,7 @@ toolbox_git_users:
 
 ```
 toolbox_tmux_users:
-  - "{{ ansible_ssh_user }}"
+  - "{{ ansible_user }}"
   - root
 ```
 
