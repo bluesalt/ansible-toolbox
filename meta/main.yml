@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: toolbox
   author: Jeff Li
   description: Jeff's toolbox
   license: Apache License 2.0
@@ -9,6 +10,7 @@ galaxy_info:
       versions:
         - 6
         - 7
-  categories:
+  galaxy_tags:
     - tool
+    - development
 dependencies: []
